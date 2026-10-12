@@ -1,14 +1,14 @@
 let x,y,d, angle, angleSpeed,r,g,b;
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  angleMode(DEGREES); 
+  angleMode(DEGREES);
 
   x = width/2;
   y = height/2;
 
-  d = 200; 
-  angle = 0; 
-  angleSpeed = 3; //adding one degree per frame
+  d = 200;
+  angle = 0;
+  angleSpeed = 3; // how many degrees angle increases each frame
 
   r = random(0,255);
   g = random(0,255);
@@ -17,8 +17,9 @@ function setup() {
 }
 
 function draw() {
-  background (20,5); 
+  background (20,5); // low alpha, so old frames fade into a trail instead of fully clearing
 
+  // map sin (which swings between -1 and 1) to a diameter between 10 and 300
   d = map(sin(angle),-1,1,10,300);
   //d = map(cos(angle),-1,1,10,300);
 

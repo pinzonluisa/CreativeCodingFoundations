@@ -13,8 +13,8 @@ function setup() {
 function draw() {
 background(0);
 
-
-for(i = 0; i < 20 ; i++)
+// draw 20 outlined squares, same center, each one step bigger than the last
+for(let i = 0; i < 20 ; i++)
 {
   noFill();
   stroke('blue');
@@ -23,5 +23,4 @@ for(i = 0; i < 20 ; i++)
 }
 
 }
-
 

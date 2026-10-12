@@ -1,15 +1,15 @@
 let x,y,d, angle,angle2, angleSpeed, angleSpeed2,r,g,b;
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  angleMode(DEGREES); 
+  angleMode(DEGREES);
 
   x = width/2;
   y = height/2;
 
-  d = 200; 
-  angle = 0; 
+  d = 200;
+  angle = 0;
   angle2 = 0;
-  angleSpeed = 3; //adding one degree per frame
+  angleSpeed = 3; // how many degrees angle increases each frame
   angleSpeed2 = 20;
 
   r = random(0,255);
@@ -19,9 +19,9 @@ function setup() {
 }
 
 function draw() {
-  background (20,5); 
+  background (20,5); // low alpha, so old frames fade into a trail instead of fully clearing
 
-  //calling return Function
+  // calling the return function below instead of writing map(sin()) out every time
   d = mapSin(angle,10,300);
   //d = map(sin(angle),-1,1,10,300);
   //d = map(cos(angle),-1,1,10,300);
@@ -42,12 +42,12 @@ function draw() {
 }
 
 
-//Mapping Sine wave function
-//return Function
+// mapping sine wave function
+// a return function: it hands a value back to wherever it was called from
 function mapSin(a,val1,val2){
   let sinMap;
 
-  sinMap = map(sin(a),-1,1,val1,val2)
+  sinMap = map(sin(a),-1,1,val1,val2);
 
   return sinMap;
 }

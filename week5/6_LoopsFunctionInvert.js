@@ -12,8 +12,8 @@ function setup() {
   g = 200;
   b = 100;
 
-  x = width/2; 
-  y = height/2; 
+  x = width/2;
+  y = height/2;
 
   d = 10;
 
@@ -22,21 +22,20 @@ function setup() {
 }
 
 function draw() {
- //inverting Color with mouse interaction
+ // inverting color with mouse interaction
  background(255,60,100,10);
 
   colorInvert();
 
   display(7,d,r,g,b);
-  
 
-  angle += 10; 
+
+  angle += 10;
 }
 
-///My functions
+// my functions
 
-//mapping Sin function
-
+// mapping sine function, returns a value remapped from sin's -1 to 1 range
 function mapSin(a,target1,target2){
   let myMap;
 
@@ -45,9 +44,9 @@ function mapSin(a,target1,target2){
   return myMap;
 }
 
-//draw my shape
+// draw my shape: numShapes circles, offset by a sine wave, layered from largest to smallest
 function display(numShapes,diam,cr,cg,cb){
-  
+
   for (let i = numShapes; i > 0; i--){
     let offSetX = mapSin(angle,-5,5);
     let offSetY = mapSin(angle,-7,7);
@@ -60,15 +59,16 @@ function display(numShapes,diam,cr,cg,cb){
 
 function colorInvert(){
 
-  // set r g b to regular values
+  // reset r g b to their regular values every frame
   r = 100;
   g = 200;
   b = 100;
 
+  // while the mouse is held, invert the background and the circle color
   if (mouseIsPressed){
   background(255-255,255-60,255-100,10); // inverted background
   // inverted RGB
-    r = 255-r; 
+    r = 255-r;
     b = 255-b;
     g = 255-g;
   }

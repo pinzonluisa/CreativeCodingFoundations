@@ -1,14 +1,14 @@
 
-let x, y, d, xDir, yDir,speed,r,g,b; 
+let x, y, d, xDir, yDir, speed, r, g, b; // speed is set up here but not used yet in this version
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  x = random(width); 
+  x = random(width);
   y = random(height);
   d = random(30,100);
 
-  xDir = random(-2,2); 
+  xDir = random(-2,2);
   yDir = random(-2,2);
 
   speed = random(1,10);
@@ -39,7 +39,7 @@ keepInCanvas();
 // Declare the function
 function keepInCanvas(){
 
-  //keepInCanvas
+  // keep the ball inside the canvas: flip direction when it hits an edge
   if((x>width)||(x<0))
   {
     //call the function randomColor()
@@ -53,7 +53,7 @@ function keepInCanvas(){
   }
 }
 
-//Declare the Function randomColor();
+// declare the function randomColor()
 function randomColor(){
   r = random(0,255);
   g = random(0,255);

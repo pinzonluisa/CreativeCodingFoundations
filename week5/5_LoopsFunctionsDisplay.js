@@ -1,4 +1,4 @@
-let x,y,d,xDir,yDir;
+let x,y,d,xDir,yDir; // xDir and yDir are set up here but not used yet in this version
 let r,g,b;
 let angle;
 
@@ -12,8 +12,8 @@ function setup() {
   g = 200;
   b = 100;
 
-  x = width/2; 
-  y = height/2; 
+  x = width/2;
+  y = height/2;
 
   d = 10;
 
@@ -25,19 +25,18 @@ function setup() {
 }
 
 function draw() {
-  // Set background to black
+  // background color, not black: R=255, G=60, B=100, with a semi-transparent alpha
   background(255,60,100,50);
 
   display(7,d,r,g,b);
-  
 
-  angle += 10; 
+
+  angle += 10;
 }
 
-///My functions
+// my functions
 
-//mapping Sin function
-
+// mapping sine function, returns a value remapped from sin's -1 to 1 range
 function mapSin(a,target1,target2){
   let myMap;
 
@@ -46,9 +45,9 @@ function mapSin(a,target1,target2){
   return myMap;
 }
 
-//draw my shape
+// draw my shape: numShapes circles, offset by a sine wave, layered from largest to smallest
 function display(numShapes,diam,cr,cg,cb){
-  
+
   for (let i = numShapes; i > 0; i--){
     let offSetX = mapSin(angle,-5,5);
     let offSetY = mapSin(angle,-7,7);
