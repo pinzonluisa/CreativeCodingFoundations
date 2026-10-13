@@ -26,4 +26,4 @@ Week4
 
 ## Course
 
-Coding Art Fundamentals (ICOM-120 / ICCC-520), CalArts. Taught by Luisa Pinzon.
+Luisa Pinzon.
