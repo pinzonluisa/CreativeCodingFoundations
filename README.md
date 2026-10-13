@@ -1,4 +1,4 @@
-# Coding Art Fundamentals: Class Examples
+# Creative Coding Foundations: Class Examples
 
 This repository holds the short p5.js examples we build together in class. Each one demonstrates a single idea on its own, a variable, a conditional, whatever that week's topic is. This is not the assignment code, that stays in its own repository. Think of this one as a reference you can come back to and see exactly what we built in class, without digging through your own notes.
 
